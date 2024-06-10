@@ -4,7 +4,7 @@
 package listajava2;
 /**
  *
- * @author Matheus V
+ * @author Matheus de Vargas
  */
 public class Exercicio1 {
     public static void main(String[] args) {
