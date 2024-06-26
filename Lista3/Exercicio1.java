@@ -9,8 +9,8 @@ public class Exercicio1 {
         int i = -2;
         int j = 65;
         do {
-           i = i + 3;
-           j = j - 5;
+           i += 3;
+           j -= 5;
             System.out.println("I: " + i + " J: " + j);
         } while(j >0);
     }
