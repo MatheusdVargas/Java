@@ -9,7 +9,7 @@ package listajava4;
  */
 public class Exercicio1 {
     public static void main(String[] args) {
-        System.out.println(Math.cbrt(9));
+        System.out.println(Math.pow(9, 3));
         System.out.println(Math.pow(7, 5));
         System.out.println(Math.pow(3, 9) + Math.pow(2, 10));
         System.out.println(Math.pow(5, 4) - Math.pow(6, 2));
