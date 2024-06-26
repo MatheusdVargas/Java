@@ -12,18 +12,19 @@ import java.util.Scanner;
 public class Exercicio5 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        String sequencia = leitor.next();
+        
+        String numeros = leitor.nextLine();
+        char atual = numeros.charAt(0);
+        char prox = numeros.charAt(1);
 
-        boolean encontrouPar = false;
-
-        for (int i = 0; i < sequencia.length() - 1; i++) {
-            if (sequencia.charAt(i) == sequencia.charAt(i + 1)) {
-                System.out.println("Par de números encontrado: " + sequencia.charAt(i) + "" + sequencia.charAt(i + 1));
-            } else {
-                System.out.println("Nenhum par encontrado");
-            }
-        } 
-
-    }
-    
+        for (i=2; i < numeros.length() && atual != prox; i++) {
+            atual = numeros.charat(i - 1);
+            prox = numeros.charAt(i);
+        }
+        if (atual == prox) {
+            system.ou.println("Encontrei um par");
+        } else {
+            System.out.println("Nao foi encontrado nenhum par");
+        }
+    }  
 }
