@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class ExercicioDez {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        char faixaEtaria;
-        char timeTorcida;
+        String faixaEtaria;
+        String timeTorcida;
         
         int totalA = 0;
         int totalC = 0;
@@ -32,62 +32,56 @@ public class ExercicioDez {
         
         while (true) {
             System.out.println("Digite a faixa etaria:\n[A] Adulto\n[C] Crianca ");
-            faixaEtaria = leitor.next().toUpperCase().charAt(0);
-            // Unico jeito que encontrei de ler char
-            if (faixaEtaria == 'X') {
+            faixaEtaria = leitor.next().toUpperCase();
+            if ("X".equals(faixaEtaria)) {
                 break;
             }
 
             System.out.println("Digite o time de torcida:\n[I] Internacional\n[G] Gremio");
-            timeTorcida = leitor.next().toUpperCase().charAt(0);
+            timeTorcida = leitor.next().toUpperCase();
 
-            if (faixaEtaria == 'A') {
+            if ("A".equals(faixaEtaria)) {
                 totalA++;
-                if (timeTorcida == 'G') {
+                if ("G".equals(timeTorcida)) {
                     adultosG++;
-                } else if (timeTorcida == 'I') {
+                } else if ("I".equals(timeTorcida)) {
                     adultosCo++;
                 }
-            } else if (faixaEtaria == 'C') {
+            } else if ("C".equals(faixaEtaria)) {
                 totalC++;
-                if (timeTorcida == 'G') {
+                if ("G".equals(timeTorcida)) {
                     criancasG++;
-                } else if (timeTorcida == 'I') {
+                } else if ("I".equals(timeTorcida)) {
                     criancasCo++;
                 }
             }
 
-            if (timeTorcida == 'G') {
+            if ("G".equals(timeTorcida)) {
                 totalG++;
-            } else if (timeTorcida == 'I') {
+            } else if ("G".equals(timeTorcida)) {
                 totalCo++;
             }
         }
         // contas
         int totalPessoas = totalA + totalC;
-        double percentualAdultos = (totalA / (double) totalPessoas) * 100;
-        double percentualCriancas = (totalC / (double) totalPessoas) * 100;
-        double percentualGremistas = (totalG / (double) totalPessoas) * 100;
-        double percentualColorados = (totalCo / (double) totalPessoas) * 100;
+        double percentualAdultos = (totalA  * 100 /  (double) totalPessoas) ;
+        double percentualCriancas = (totalC * 100/ (double) totalPessoas) ;
+        double percentualGremistas = (totalG * 100/ (double) totalPessoas) ;
+        double percentualColorados = (totalCo * 100/ (double) totalPessoas) ;
 
         System.out.println("Percentual de adultos: " + percentualAdultos);
         System.out.println("Percentual de criancas: " + percentualCriancas);
         System.out.println("Percentual de gremistas: " + percentualGremistas);
         System.out.println("Percentual de colorados: " + percentualColorados);
-
-        
-        double percentualAdultosGremistas = (adultosG / (double) totalA) * 100;
-        double percentualAdultosColorados = (adultosCo / (double) totalA) * 100;
+      
+        double percentualAdultosGremistas = (adultosG * 100/ (double) totalA) ;
+        double percentualAdultosColorados = (adultosCo * 100/ (double) totalA) ;
         System.out.println("Percentual de adultos gremistas: " + percentualAdultosGremistas);
         System.out.println("Percentual de adultos colorados: " + percentualAdultosColorados);
 
-
-
-        double percentualCriancasGremistas = (criancasG / (double) totalC) * 100;
-        double percentualCriancasColorados = (criancasCo / (double) totalC) * 100;
+        double percentualCriancasGremistas = (criancasG * 100/ (double) totalC) ;
+        double percentualCriancasColorados = (criancasCo * 100/ (double) totalC) ;
         System.out.println("Percentual de crianças gremistas: " + percentualCriancasGremistas);
         System.out.println("Percentual de crianças coloradas: " + percentualCriancasColorados);
-            
-        
     }   
 }
