@@ -15,6 +15,5 @@ public class Exercicio2 {
                 System.out.println("I=" + i + " J=" + j);
             }
         }
-    }
-    
+    }   
 }

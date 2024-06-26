@@ -11,8 +11,7 @@ public class Exercicio1 {
         do {
            i += 3;
            j -= 5;
-            System.out.println("I: " + i + " J: " + j);
+           System.out.println("I: " + i + " J: " + j);
         } while(j >0);
     }
-    
 }

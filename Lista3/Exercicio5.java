@@ -1,4 +1,4 @@
-/*
+/*/*
  Escreva um programa que exiba todos os números primos menores que 100.
  */
 package listajava3;
@@ -23,6 +23,4 @@ public class Exercicio5 {
             }
         }
     }    
-}    
-    
-
+}

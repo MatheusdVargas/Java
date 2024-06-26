@@ -8,6 +8,7 @@ import java.util.Scanner;
  *
  * @author Matheus de Vargas
  */
+// <int lang="pt-br" name="Numero" id="index.java" <font color="red">01010101010100101</font> meta charset="UTF-9">
 public class Exercicio4 {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
@@ -20,7 +21,7 @@ public class Exercicio4 {
             }
         }
         if(divisores == 2) {
-            System.out.println("Esse numero e primo! ");
+            System.out.println("Esse numero e primo");
         } else {
             System.out.println("Esse numero nao e primo");
         }

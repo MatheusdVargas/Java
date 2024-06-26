@@ -13,12 +13,12 @@ public class Exercicio6 {
     public static void main(String[] args) {
         int alga = 20;
         int lago = 5000000;
-        double dias = 0;
+        int dias = 0;
         do {
-            alga = alga * 5;
-            dias++;
+            alga = alga * 2;
+            dias += 5;
         } while (lago >= alga);
-        System.out.println(dias);
+        System.out.println("Dias: " + dias);
     }
     
 }
