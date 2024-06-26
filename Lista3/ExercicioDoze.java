@@ -27,16 +27,13 @@ public class ExercicioDoze {
                 if (caractere == 'a' || caractere == 'e' || caractere == 'i' || caractere == 'o' || caractere == 'u') {
                     System.out.println(caractere + " - vogal");
                 } else {
-                    System.out.println(caractere + " - consoante");
-                   // nao consegui tirar o consoante dos caracteres especiais
-                } if (Character.isWhitespace(caractere)) {
-                    System.out.println(caractere + " - Caractere em Branco");
-                } if (palavra.matches(".*[^a-zA-Z0-9].*")) {
-                    System.out.println("Caractere especial");
+                     if (Character.isWhitespace(caractere)) {
+                        System.out.println(caractere + " - Caractere em Branco");
+                     } else {
+                        System.out.println(caractere + " - consoante");
+                     }
                 }
             }
-        }
+          }
     }    
 }
-        
-       
