@@ -8,19 +8,19 @@ package listajava3;
  */
 public class Exercicio5 {
     public static void main(String[] args) {
-        for (int num = 2; num < 100; num++) {
-            boolean ehPrimo = true;
+        for(int i = 2; i<=99; i++){
             
-            for (int i = 2; i <= Math.sqrt(num); i++) {
-                if (num % i == 0) {
-                    ehPrimo = false;
-                    break;
-                }
-            }
+            int contadores = 0;
             
-            if (ehPrimo) {
-                System.out.print(num + " ");
-            }
+           for(int j = 1; j <= i; j++){
+               
+               if(i % j == 0){
+                   contadores++;
+               }
+           }
+           if(contadores == 2){
+               System.out.println("Esse numero e primo: " + i);
+           }
         }
     }    
 }
