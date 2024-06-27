@@ -12,28 +12,51 @@ import java.util.Scanner;
  */
 public class ExercicioDoze {
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        while (true) {
-            System.out.println("Digite uma palavra: ");
-            String palavra = leitor.nextLine().toLowerCase();
-
-            if (palavra.equals("tchau")) {
-                break;
-            }
+        Scanner leitor = new Scanner (System.in);
+        
+        String mensagem;
+        while( ! (mensagem = leitor.nextLine().toLowerCase() ).equals("tchau") ){
             
-            for (int i = 0; i < palavra.length(); i++) {
-                char caractere = palavra.charAt(i);
-
-                if (caractere == 'a' || caractere == 'e' || caractere == 'i' || caractere == 'o' || caractere == 'u') {
-                    System.out.println(caractere + " - vogal");
-                } else {
-                     if (Character.isWhitespace(caractere)) {
-                        System.out.println(caractere + " - Caractere em Branco");
-                     } else {
-                        System.out.println(caractere + " - consoante");
-                     }
+            for(int ind=0; ind<mensagem.length(); ind++){
+                char caractere = mensagem.charAt(ind);
+                System.out.print(caractere);
+                
+                switch(caractere){
+                    case'a':
+                    case'e': 
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        System.out.println("Vogal ");
+                    break;
+                    case'b':
+                    case'c':
+                    case'd':
+                    case'f':
+                    case'g':
+                    case'h':
+                    case'j':
+                    case'k':
+                    case'l':
+                    case'm':
+                    case'n':
+                    case'p':
+                    case'q':
+                    case'r':
+                    case's':
+                    case't':
+                    case'v':
+                    case'w':
+                    case'x':
+                    case'y':
+                    case'z':
+                        System.out.println(" Consoante ");
+                    break;
+                    default:
+                        System.out.println(" Invalido ");
+                    break;
                 }
             }
-          }
+        }
     }    
 }
