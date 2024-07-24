@@ -5,9 +5,8 @@
 package subrotinas;
 
 public class TestaConta {
-
     public static void main(String[] args) {
-        Subrotinas minhaConta = new Subrotinas();
+        Conta minhaConta = new Conta();
         System.out.println("Saldo: " + minhaConta.getSaldo() );
         System.out.println(minhaConta.saque(50.0));
         System.out.println(minhaConta.deposito(-50.0));
@@ -15,6 +14,12 @@ public class TestaConta {
         System.out.println("Saldo: " + minhaConta.getSaldo());
         System.out.println(minhaConta.saque(34.0));
         System.out.println("Saldo: " + minhaConta.getSaldo());
+        
+        System.out.println(minhaConta.getquantContas());
+        Conta outraConta = new Conta();
+        Conta novaConta = new Conta();
+        
+        System.out.println(Conta.getquantContas());
     }
     
 }
