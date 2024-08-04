@@ -4,8 +4,6 @@ Os parâmetros de entrada são os coeficientes a, b e c. - feito
 O retorno é um array contendo as duas raízes (se houver apenas 1 raiz, o array terá 1 posição;
 se não houver raiz, retornar null) - feito
  */
-package trabalho1;
-
 public class bhaskara {
     public static void main(String[] args) {
         double[] raizes = calcularRaizes(1, -3, 2); 
