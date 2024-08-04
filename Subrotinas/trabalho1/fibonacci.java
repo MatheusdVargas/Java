@@ -15,13 +15,13 @@ public class fibonacci {
     public static int calcular(int n) {
         int fib1 = 1, fib2 = 1, fibN = 1;
         // Formula: n = (n-1) + (n-2)
-        // for começa em 3 pq os dois primeiros numeros são 1
+        // for começa em 3 pq os valores ja foram inicializados
         for (int i = 3; i <= n; i++) {
             fibN = fib1 + fib2;
             fib1 = fib2;
             fib2 = fibN;
         }
-        
+        //nem eu entendi oque foi feito, mas ta funcionando
         return fibN;
     }
 }
