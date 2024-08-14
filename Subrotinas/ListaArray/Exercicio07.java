@@ -13,10 +13,31 @@ public class Exercicio07 {
 
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
-        double medias[] = new double[10];
-        for(int i = 0; i < medias.length; i++) {
+        double indice[] = new double [10];
+        double minExame[] = new double [10];
+        double media[] = new double [10];
+        
+        for(int i = 0; i < 10; i++){
+            System.out.println("Digite a nota: ");
+            media[i] = leitor.nextDouble();
+            
+            if(media[i] < 7){
+                indice[i]++;
+                
+            }
             
         }
+        for(int i = 0; i< 10; i++){
+            if(indice[i] > 0){
+                System.out.println("O aluno esta em exame");
+                double NotaMinEx = (12 - media[i]);
+                minExame[i] = NotaMinEx;
+                System.out.println("O aluno precisa tirar no minimo " +NotaMinEx+ " no exame para consseguir passar de ano");
+            }else{
+                System.out.println("O aluno naum esta em exame!");
+            }
+        }
+        
     }
     
 }
