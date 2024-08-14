@@ -1,20 +1,34 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+Escreva um novo programa, alterando o exercício 1, pesquisando qual é o menor e o maior dos
+50 números
  */
 package arrayemetodos;
 
-/**
- *
- * @author 05138300067
- */
+import java.util.Scanner;
+
 public class Exercicio03 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner leitor = new Scanner(System.in);
+        double numeros[] = new double [50];
+        double maximo, minimo, atual;
+        
+        System.out.println("Digite o valor: ");
+        maximo = minimo = leitor.nextInt();
+        
+        for(int i =1; i<50; i++){
+            System.out.println("Digite o valor: ");
+            atual = leitor.nextDouble();
+            numeros[i]=atual;
+            if( atual > maximo ) {
+                maximo = atual;
+            } else {
+                if( atual < minimo ) {
+                    minimo = atual;
+                }
+            }
+        }
     }
     
 }
+
