@@ -1,20 +1,31 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+Escreva um novo programa, alterando o exercício 2, e após o cálculo da média, conte quantos
+dos 50 números estão acima da média calculada.
  */
 package arrayemetodos;
 
-/**
- *
- * @author 05138300067
- */
+import java.util.Scanner;
+
 public class Exercicio04 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+        Scanner leitor = new Scanner(System.in);
+        int acima = 0;
+        double lista[] = new double[50];
+        double soma = 0;
+        double quant = 0;
+        for(int i = 0; i < 50; i++) {
+            lista[i] = leitor.nextDouble();
+            quant++;
+            soma += lista[i];
+        }
+        double media = soma / quant;
+        for(int i =0; i<50; i++){
+            if(lista[i] > media){
+                acima++;
+            }
+        System.out.println(media);
+
+    } 
 }
+
