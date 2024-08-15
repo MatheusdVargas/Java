@@ -1,7 +1,7 @@
 /*
  Escreva um programa em Java que leia e armazene 50 números reais.
  */
-package arrayemetodos;
+
 import java.util.Scanner;
 public class Exercicio01 {
 
