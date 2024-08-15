@@ -1,8 +1,7 @@
 /*
 Escreva um novo programa, alterando o exercício 1, incluindo o cálculo da média aritmética dos
 50 números.
- */
-package arrayemetodos;
+ */
 import java.util.Scanner;
 public class Exercicio02 {
 
