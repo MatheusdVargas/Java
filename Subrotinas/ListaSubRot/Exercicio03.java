@@ -1,8 +1,7 @@
 /*
 Escreva um novo programa, alterando o exercício 1, pesquisando qual é o menor e o maior dos
 50 números
- */
-package arrayemetodos;
+ */
 
 import java.util.Scanner;
 
