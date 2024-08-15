@@ -1,8 +1,7 @@
 /*
 Escreva um novo programa, alterando o exercício 4, e conte também quantos dos 50 números
 estão abaixo da média calculada.
- */
-package arrayemetodos;
+ */
 
 import java.util.Scanner;
 
