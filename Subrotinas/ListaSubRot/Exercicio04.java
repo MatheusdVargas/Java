@@ -1,8 +1,7 @@
 /*
 Escreva um novo programa, alterando o exercício 2, e após o cálculo da média, conte quantos
 dos 50 números estão acima da média calculada.
- */
-package arrayemetodos;
+ */
 
 import java.util.Scanner;
 
