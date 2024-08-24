@@ -15,7 +15,7 @@ public class Exercicio04 {
         Scanner leitor = new Scanner(System.in);
         ArrayList <Integer> lista = new ArrayList();
         ArrayList <Integer> lista2 = new ArrayList();
-        for(int i = 0; i < 25; i++) {
+        for(int i = 0; i < 15; i++) {
             int num = leitor.nextInt();
             lista.add(num);
         }
