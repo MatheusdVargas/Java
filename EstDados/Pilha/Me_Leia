@@ -1,0 +1,32 @@
+		Estrutura de dados
+É uma estrutura em que o ultimo elemento
+a ser inserido é o primeiro, na ordem, a ser removido.
+
+Ex.: Pilha de pratos (você sempre tira o de cima)
+
+Sinônimos: 
+Stack (ingles)
+LIFO (Last In First Out)
+UEPS (Ultimo a Entrar, Primeiro a Sair)
+
+Aplicações: 
+1 - Execução de chamadas de metodos e funções
+
+2 - Avaliar expressoes aritmeticas
+
+3 - Fazer / desfazer acoes em editores
+
+4 - Historico de navegações web
+
+5 - Galeria de fotos
+
+6 - Algoritmos de busca em profundidade
+
+7 - Gerenciamento de Estoque
+
+		Operações em Pilhas 
+
+Emplihas -> push
+Desempilhar -> pop
+Espiar -> peek
+Tá vazia? -> isEmpty
