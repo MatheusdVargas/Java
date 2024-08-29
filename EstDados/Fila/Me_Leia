@@ -1,0 +1,29 @@
+		Estrutura de dados
+Fila: nessa estrutura, o primeiro elemento inserido é o primeiro
+que será removido, na ordem.
+
+Exemplo:
+Fila de pessoas
+Fila de produtos pereciveis
+Fila de carros numa balsa
+
+Sinonimos
+🚩 Queue
+FIFO (First In First Out)
+FCFS (First Come First Served)
+PEPS (Primeiro A Entrar Primeiro a Sair)
+
+Aplicações:
+Gerenciamento de processos;
+Gerenciamento de dispositivos de E/S;
+Impressão;
+Roteamento de pacotes em uma rede;
+Simulações (jogos, bancos...);
+Busca em largura;
+Fila de espera da black friday e o show do U2;
+
+Operações:
+Enfileirar - offer;
+Desempilhar - poll;
+Espiar - peek;
+Tá Vazia? - isEmpty;
