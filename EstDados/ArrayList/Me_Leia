@@ -1,0 +1,12 @@
+			Estrutura de Dados
+São coleções/conjuntos de elementos geralmente homogênea
+
+Arrays: É um predio de elementos. 
+"Construiu tá fixo, não tem como mudar"
+Vantegem: acesso rápido
+
+Listas: Estrutura flexivel, cresce/diminui DINAMICAMENTE com a necessidade da solução.
+
+Vantagens: 
+Flexivel;
+Acesso um pouco mais demorado.
