@@ -12,12 +12,25 @@ import java.util.Stack;
 public class Exercicio05 {
 
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
-        Stack <Integer> pilha = new Stack();
-        int decimal = leitor.nextInt();
-        while(decimal % 2 > 0) {
-            
+        Scanner scanner = new Scanner(System.in);
+        Stack<Integer> pilha = new Stack<>();
+        
+        System.out.print("Digite um número inteiro decimal: ");
+        int numeroDecimal = scanner.nextInt();
+
+        int numero = numeroDecimal;
+        while (numero > 0) {
+            int resto = numero % 2;
+            pilha.push(resto);
+            numero = numero / 2;
         }
+
+        StringBuilder numeroBinario = new StringBuilder();
+        while (!pilha.isEmpty()) {
+            numeroBinario.append(pilha.pop());
+        }
+
+        System.out.println("Número binário: " + numeroBinario.toString());
     }
     
 }
