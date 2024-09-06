@@ -15,14 +15,13 @@ public class Exercicio04 {
         String texto = leitor.nextLine();
         for(int i=0; i < texto.length(); i++) {
             pilha.push(texto.charAt(i));
-            System.out.println(pilha);
         }
         String newText ="";
         while(!pilha.isEmpty()) {
-                newText += pilha.getLast();
-                pilha.pop();
-                System.out.println(newText);
-            }
+            newText += pilha.getLast();
+            pilha.pop();
+        }
+        System.out.println(newText);
     }
     
 }
