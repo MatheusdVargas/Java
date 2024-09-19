@@ -25,7 +25,18 @@ public class QuickSort {
         }
     }
     public static void main(String[] args) {
-
+        int numeros[] = GeradorAleatorio.geraInt(20, 0, 1000);
+        for(int numero : numeros) {
+            System.out.print(numero + " ");
+        }
+        System.out.println("");
+        
+        QuickSort.sort(numeros, 0, numeros.length -1);
+        
+        for(int numero : numeros) {
+            System.out.print(numero + " ");
+        }
+        System.out.println();
     }
     
 }
