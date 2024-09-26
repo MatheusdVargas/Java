@@ -1,0 +1,10 @@
+                Arquivos
+
+Diferença entre arquivo texto e arquivo binário:
+
+Arquivo texto é todo aquele que pode ser lido - Caracteres;
+O arquivo binário não pode ser lido (como ser humano) - Bytes;
+
+Arquivo Texto:
+Estruturado/formatado (Ex.: Planilha de dieta);
+Sem estrutura (Ex.: Diário);
