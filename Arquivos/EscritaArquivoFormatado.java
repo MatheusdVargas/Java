@@ -2,8 +2,9 @@ package arquivos;
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
-public class Tabulacao {
+public class EscritaArquivoFormatado {
     public static void main(String[] args) {
         File arqLeitura = new File("notas.txt");
         Scanner leitor = null;
@@ -29,17 +30,35 @@ public class Tabulacao {
                 leitor.close();
             }
           }
-        for(int i = 0; i < codMatricula.size(); i++) {
-            // d = inteiro decimal
-            // f = float (numero com ponto)
-            // 7/ 4/ 2 = numeros de digitos a imprimir
-            // .1 = numero de casas apos a virgula
-            System.out.printf( "%7d\t %4.1f\t %4.1f\t%10d\n", 
+        
+        ArrayList <Double> medias = new ArrayList();
+        for(int i = 0; i <notas1.size(); i++) {
+            double media  = (notas1.get(i) + notas2.get(i)) / 2;
+            medias.add(media);
+        }
+        
+        File arqSaida = new File("medias.txt");
+        PrintWriter escritor = null;
+        
+        try {
+            escritor = new PrintWriter(arqSaida);
+            for(int i = 0; i < codMatricula.size(); i++) {
+            escritor.printf( "%7d %4.1f %4.1f %2d %4.1f\n", 
                     codMatricula.get(i),
                     notas1.get(i),
                     notas2.get(i),
-                    faltas.get(i) *1000000 );
+                    faltas.get(i),
+                    medias.get(i));
         }
+        } catch (FileNotFoundException exc) {
+            exc.printStackTrace();
+        } finally {
+            if(escritor != null) {
+                escritor.close();
+            }
+        }
+        
+        
     }
     
 }
