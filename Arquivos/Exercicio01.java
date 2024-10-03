@@ -1,5 +1,7 @@
 package arquivos;
-
+/*
+Nicolas olhar pra tras que eu vou copiar do chatgpt (ele nunca mais olhou pra frente).
+*/
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
