@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package mediasnotas;
+
 
 /**
  *
@@ -85,6 +85,12 @@ public class Janela extends javax.swing.JFrame {
         lResultMinExame.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
 
         lNotExame.setText("Nota Exame:");
+
+        ctNotExame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ctNotExameActionPerformed(evt);
+            }
+        });
 
         lMedFin.setText("Média Final");
 
@@ -247,15 +253,18 @@ public class Janela extends javax.swing.JFrame {
         if("Reprovado!".equals(lResultSitu.getText()) || "Em Exame!".equals(lResultSitu.getText())) {
             double minExam = (5.0 - 0.6 * media) / 0.4;
             String minExamS = String.valueOf(minExam);
-            lResultMinExame.setText(minExamS);
+            lResultMinExame.setText(String.format(minExamS, "%.2f"));
+            
+            if(!"".equals(ctNotExame.getText())) {
+                String notaEx = ctNotExame.getText();
+                double notaExame = Double.parseDouble(notaEx);
 
-            String notaEx = ctNotExame.getText();
-            double notaExame = Double.parseDouble(notaEx);
+                double mediaFinal = media * 0.6 + notaExame * 0.4;
+                String MedFin = String.valueOf(mediaFinal);
 
-            double mediaFinal = media * 0.6 + notaExame * 0.4;
-            String MedFin = String.valueOf(mediaFinal);
-
-            lResultMedFin.setText(MedFin);
+                lResultMedFin.setText(String.format(MedFin, "%.2f"));
+            } 
+            
         }
     }//GEN-LAST:event_ctCalcActionPerformed
 
@@ -268,6 +277,10 @@ public class Janela extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_ctN1ActionPerformed
+
+    private void ctNotExameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ctNotExameActionPerformed
+        
+    }//GEN-LAST:event_ctNotExameActionPerformed
 
     /**
      * @param args the command line arguments

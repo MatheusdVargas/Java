@@ -215,6 +215,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="ctNotExame">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ctNotExameActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lMedFin">
       <Properties>
