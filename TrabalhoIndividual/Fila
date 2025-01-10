@@ -1,0 +1,109 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Fila {
+
+    public static class Proc implements Comparable<Proc> {
+        int id;
+        int prio;
+        String desc;
+        
+        public Proc(int id, int prio, String desc) {
+            this.id = id;
+            this.prio = prio;
+            this.desc = desc;
+        }
+        
+        @Override
+        public int compareTo(Proc other) {
+            return Integer.compare(this.prio, other.prio);
+        }
+        
+        @Override
+        public String toString() {
+            return "ID: " + id + ", Prioridade: " + prio + ", Descricao: " + desc;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        List<Proc> fila = new ArrayList<>();
+        int proxId = 1; 
+        int opcao;
+        
+        do {
+            System.out.println("Escolha uma opcao:");
+            System.out.println("[1] Adicionar processo");
+            System.out.println("[2] Exibir fila");
+            System.out.println("[3] Executar um processo");
+            System.out.println("[4] Simular execucao completa");
+            System.out.println("[0] Sair");
+            opcao = leitor.nextInt();
+            leitor.nextLine(); // Limpar pra nao dar bug
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Digite a prioridade (0 a 15):");
+                    int prio = leitor.nextInt();
+                    leitor.nextLine(); 
+
+                    if (prio < 0 || prio > 15) {
+                        System.out.println("Erro: Prioridade deve ser entre 0 e 15.");
+                        break;
+                    }
+
+                    System.out.println("Digite a descricao:");
+                    String desc = leitor.nextLine();
+                    
+                    Proc novoProc = new Proc(proxId++, prio, desc);
+                    fila.add(novoProc);
+                    Collections.sort(fila);
+                    System.out.println("Processo adicionado");
+                    break;
+
+                case 2:
+                    if (fila.isEmpty()) {
+                        System.out.println("Fila vazia");
+                    } else {
+                        System.out.println("Fila Atual:");
+                        fila.forEach(System.out::println);
+                    }
+                    break;
+
+                case 3:
+                    if (fila.isEmpty()) {
+                        System.out.println("Fila vazia, nenhum processo para executar");
+                    } else {
+                        Proc exec = fila.remove(0);
+                        System.out.println("Executando: " + exec);
+                    }
+                    break;
+
+                case 4:
+                    if (fila.isEmpty()) {
+                        System.out.println("Fila vazia, nenhum processo para executar");
+                    } else {
+                        System.out.println("Executando todos os processos:");
+                        while (!fila.isEmpty()) {
+                            Proc exec = fila.remove(0);
+                            System.out.println("Executando: " + exec);
+                        }
+                        System.out.println("Fila vazia");
+                    }
+                    break;
+
+                case 0:
+                    return;
+
+                default:
+                    System.out.println("[Opcao invalida]");
+            }
+        }
+        while (opcao != 5);
+    }
+}
+
+Se precisar de explicações ou modificações, é só pedir!
+
